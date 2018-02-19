@@ -18,17 +18,13 @@ proc sort data=data.hosp0; by ppn admdate sepdate;
 
 
 /* 3. Prepare the survey data */
-data surv1 (keep=ppn sex2 age_grp); *Note interim file sent to temporary work folder;
+data surv1 (keep=ppn sex_clean age_grp); *Note interim file sent to temporary work folder;
 set data.surv0;  
 by ppn;
 * Identify duplicates;
 retain count;
 if first.ppn then count=0;
 count = count+1;
-* Correct sex variable;
-sex2 = sex;
-if sex = '1' then sex2 = 'F';
-if sex = '2' then sex2 = 'M';
 * Derive categorical age group variable;
 age_grp = floor(age/10);
 * Keep one record per individual;
@@ -76,6 +72,15 @@ value agegrp
 value died
 0 = 'survived'
 1 = 'died';
+
+value died
+0 = 'survived'
+1 = 'died';
+
+value sexf
+1 = '1 Male'
+2 = '2 Female';
+
 run;
 
 data data.mort_by_age_sex;

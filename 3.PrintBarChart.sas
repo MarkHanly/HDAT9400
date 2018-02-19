@@ -12,7 +12,7 @@ ODS PDF FILE ="&output/&date._risk_by_age_sex.pdf";
 
 title 'Mortality by age and sex';
 proc sgplot data=data.mort_by_age_sex;
-vbar age_grp / response=died stat=mean group=sex2 nostatlabel groupdisplay=cluster;
+vbar age_grp / response=died stat=mean group=sex_clean nostatlabel groupdisplay=cluster;
 xaxis label="Age group (years)";
 yaxis grid label="Proportion of deaths";
 run;

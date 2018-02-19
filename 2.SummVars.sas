@@ -12,7 +12,7 @@ ODS PDF FILE ="&output/&date._variable_summary.pdf";
 
 proc freq data=data.mort_by_age_sex;
 title "Summary distribution of study variables";
-tables sex2 age_grp died sex2*age_grp /missing nocum norow nocol; 
+tables sex_clean age_grp died sex_clean*age_grp /missing nocum norow nocol; 
 run;
 
 ODS PDF CLOSE;

@@ -13,10 +13,19 @@
 /* 1. Set project macros */
 
 * Set the root and output folder macros here;
-%let data = Project1/Data; *Set the location where you will store your copy of the project data;	
-%let output = Project1/Outputs; *Set the location where you will store your project outputs;
-%let code = Project1/Code; *Set the location where you have stored the project code;
-%let source = /courses/d98e5a15ba27fe300; *This is the location of the course data in SAS OnDemand, provided by the course coordinator;
+**************************************************************************************;
+*1a. Set the location where you have stored the course data;
+%let source = H:/Teaching/HDAT9400/SourceData; 
+
+*1b. Set the location where you have stored the project code;
+%let code = H:/Teaching/HDAT9400/Project1/Code; 
+
+*1c. Set the location where you will store your copy of the project data;
+%let data = H:/Teaching/HDAT9400; 
+
+*1d. Set the location where you will store your project outputs;
+%let output = H:/Teaching/HDAT9400; 
+**************************************************************************************;
 
 * Today's date automatically set here;
 %let date = %sysfunc(putn(%sysfunc(today()),yymmddn8.));
@@ -26,6 +35,10 @@
 libname data "&data";
 libname output "&output";
 libname source "&source";
+
+* Tell SAS where to ignore missing formats;
+options nofmterr;
+
 
 */ 3. Reproduce the analysis */
 
