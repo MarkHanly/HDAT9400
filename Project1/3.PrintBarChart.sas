@@ -1,6 +1,6 @@
 /**************************************************************
 * Project: 	HDAT9400 - Management and curation of health data
-* Purpose:	Set up folder structure and read data
+* Purpose:	Print historgram of mortality by age and sex
 * Inputs: 	mort_by_age_sex.sas7bdat
 * Outputs:	risk_by_age_sex.pdf
 * Author:	Mark Hanly

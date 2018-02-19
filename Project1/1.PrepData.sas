@@ -1,6 +1,6 @@
 /**************************************************************
 * Project: 	HDAT9400 - Management and curation of health data
-* Purpose:	Read and prepate the analysis data 
+* Purpose:	Read and prepare the analysis data 
 * Inputs: 	hospital.sas7bdat; survey.sas7bdat;
 * Outputs:	mort_by_age_sex.sas7bdat
 * Author:	Mark Hanly
