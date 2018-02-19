@@ -1,14 +1,13 @@
-/******************************************************************
+/********************************************************************
 * Project: 	HDAT9400 - Management and curation of health data
 * Purpose:	Set macros and run project programs
 * Inputs: 	hospital.sas7bdat; survey.sas7bdat; 
 * Outputs:	Proportion of deaths in follow-up period by age and sex
 * Author:	Mark Hanly
 * Date:		5th Feb 2018
-* Note:		Specify the input and output folders in step 1 
-* 			(make sure these locations exist in the 
-* 			Server Files and Folders section)
-*******************************************************************/
+* Note:		Specify the input and output folders in Step 1a - Step1d
+			(Make sure these locations exist)
+*********************************************************************/
 
 /* 1. Set project macros */
 
